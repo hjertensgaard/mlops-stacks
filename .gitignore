@@ -12,3 +12,4 @@ __pycache__/
 .cache
 *.pyc
 mlops-stacks.iml
+tests/example-project-configs/one-intake

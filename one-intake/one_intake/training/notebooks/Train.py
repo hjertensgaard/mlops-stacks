@@ -58,7 +58,7 @@ dbutils.widgets.text(
 )
 # Unity Catalog registered model name to use for the trained model.
 dbutils.widgets.text(
-    "model_name", "dev.one_intake.one-intake-model", label="Full (Three-Level) Model Name"
+    "model_name", "sbox_ml.one_intake.one-intake-model", label="Full (Three-Level) Model Name"
 )
 
 # COMMAND ----------

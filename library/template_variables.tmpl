@@ -174,3 +174,24 @@
 {{ define `project_name_alphanumeric_underscore` -}}
     {{- (regexp `-`).ReplaceAllString ((regexp `[^A-Za-z0-9_-]`).ReplaceAllString (print .input_project_name) ``) `_` -}}
 {{- end }}
+
+# define custom template variables
+{{ define `databricks_dev_workspace_host` -}}
+    {{ .input_databricks_dev_workspace_host }}
+{{- end }}
+
+{{ define `unity_catalog_dev` -}}
+    {{ .input_unity_catalog_dev }}
+{{- end }}
+
+{{ define `unity_catalog_staging` -}}
+    {{ .input_unity_catalog_staging }}
+{{- end }}
+
+{{ define `unity_catalog_prod` -}}
+    {{ .input_unity_catalog_prod }}
+{{- end }}
+
+{{ define `unity_catalog_test` -}}
+    {{ .input_unity_catalog_test }}
+{{- end }}

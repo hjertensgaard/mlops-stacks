@@ -1,0 +1,21 @@
+{
+  "input_root_dir": "one-intake",
+  "input_project_name": "one-intake",
+  "input_cloud": "azure",
+  "input_cicd_platform": "github_actions",
+  "input_databricks_dev_workspace_host": "https://adb-4173911016188321.1.azuredatabricks.net",
+  "input_databricks_staging_workspace_host": "https://adb-your-staging-workspace.azuredatabricks.net",
+  "input_databricks_prod_workspace_host": "https://adb-your-prod-workspace.azuredatabricks.net",
+  "input_default_branch": "main",
+  "input_release_branch": "release",
+  "input_read_user_group": "SEC-MLOps-Contributor",
+  "input_include_feature_store": "no",
+  "input_include_mlflow_recipes": "no",
+  "input_include_models_in_unity_catalog": "yes",
+  "input_schema_name": "one_intake",
+  "input_unity_catalog_read_user_group": "account users",
+  "input_unity_catalog_dev": "sbox_ml",
+  "input_unity_catalog_staging": "staging",
+  "input_unity_catalog_prod": "prod",
+  "input_unity_catalog_test": "test"
+}

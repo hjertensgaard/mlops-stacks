@@ -1,6 +1,6 @@
 # Deployment target specific values
 targets:
-  dev:
+  {{template `unity_catalog_dev` .}}:
     resources:
       {{ if (eq .input_include_models_in_unity_catalog `no`) }}models:
         model:
@@ -10,7 +10,7 @@ targets:
         model:
           comment: Registered model in Unity Catalog for the "{{template `project_name` .}}" ML Project for ${bundle.target} deployment target.{{end}}
 
-  test:
+  {{template `unity_catalog_test` .}}:
     resources:
       {{ if (eq .input_include_models_in_unity_catalog `no`) }}models:
         model:
@@ -20,7 +20,7 @@ targets:
         model:
           comment: Registered model in Unity Catalog for the "{{template `project_name` .}}" ML Project for ${bundle.target} deployment target.{{end}}
 
-  staging:
+  {{template `unity_catalog_staging` .}}:
     resources:
       {{ if (eq .input_include_models_in_unity_catalog `no`) }}models:
         model:
@@ -30,7 +30,7 @@ targets:
         model:
           comment: Registered model in Unity Catalog for the "{{template `project_name` .}}" ML Project for ${bundle.target} deployment target.{{end}}
 
-  prod:
+  {{template `unity_catalog_prod` .}}:
     resources:
       {{ if (eq .input_include_models_in_unity_catalog `no`) }}models:
         model:

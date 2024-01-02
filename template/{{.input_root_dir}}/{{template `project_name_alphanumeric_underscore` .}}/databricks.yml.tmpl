@@ -19,21 +19,20 @@ include:
 
 # Deployment Target specific values for workspace
 targets:
-  dev:
+  {{template `unity_catalog_dev` .}}:
     default: true
     workspace:
-      # TODO: add dev workspace URL
-      host:
+      host: {{template `databricks_dev_workspace_host` .}}
 
-  staging:
+  {{template `unity_catalog_staging` .}}:
     workspace:
       host: {{template `databricks_staging_workspace_host` .}}
 
-  prod:
+  {{template `unity_catalog_prod` .}}:
     workspace:
       host: {{template `databricks_prod_workspace_host` .}}
 
-  test:
+  {{template `unity_catalog_test` .}}:
     workspace:
       host: {{template `databricks_staging_workspace_host` .}}
 
